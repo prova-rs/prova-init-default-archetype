@@ -1,6 +1,9 @@
 [plugin]
 name = "lib"
-description = "A project-specific library plugin for fixtures, topologies, and helpers that can be use in proof suites""
+description = "The project's shared library: fixtures, topologies, and helpers reused across proof suites."
 
-# Plugins can depend on other plugins.
+# Private dependencies — other plugins this library requires, resolved for this plugin alone (a
+# consumer of `lib` never sees them). For example:
+#   [plugins]
+#   redis = "prova-rs/prova-redis@v1"
 [plugins]
