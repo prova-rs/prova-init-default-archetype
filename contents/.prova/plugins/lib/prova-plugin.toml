@@ -1,0 +1,6 @@
+[plugin]
+name = "lib"
+description = "A project-specific library plugin for fixtures, topologies, and helpers that can be use in proof suites""
+
+# Plugins can depend on other plugins.
+[plugins]
