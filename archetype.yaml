@@ -10,9 +10,6 @@ templating:
   lstrip_blocks: true
 
 catalog:
-  author:
-    source: "https://github.com/archetect-common/author-prompts-library.git#v1"
-    library: true
   gitignore:
     source: "https://github.com/archetect-common/gitignore-library.git#v1"
     library: true

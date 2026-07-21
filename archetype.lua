@@ -1,6 +1,5 @@
 local context = Context.new()
-local author  = require("author")
-local gitignore     = require("gitignore")
+local gitignore = require("gitignore")
 
 -- ── Prompts ─────────────────────────────────────────────────────────────
 context:prompt_text("Project Name:", "project_name", {
@@ -8,7 +7,6 @@ context:prompt_text("Project Name:", "project_name", {
     help = "The project's canonical name.",
 })
 
-author.prompt(context)
 gitignore.prompt(context)
 
 -- ── Render ──────────────────────────────────────────────────────────────
