@@ -2,7 +2,7 @@
 # rendered project's own suite. It is the archetype's harness, not part of the scaffold — archetect
 # renders only `contents/`, so none of this ships to a scaffolded project.
 [run]
-paths = ["proofs"]
+proofs = ["proofs"]
 
 [luals]
-manage = "never"   # this repo already owns its .luarc.json; prova stays a guest
+manage = "auto" # this repo already owns its .luarc.json; prova stays a guest

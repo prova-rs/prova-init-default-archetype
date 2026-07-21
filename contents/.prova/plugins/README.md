@@ -1,7 +1,7 @@
 # Project plugins
 
 Each top-level directory here is a project-local plugin. They're discovered because the manifest
-declares this directory as the plugin root (`plugin_root = ".prova/plugins"` in `.prova.toml`) — a
+declares this directory as the plugin root (`plugin_root = ".prova/plugins"` in `.prova/prova.toml`) — a
 proof then reaches one with `require("<dir-name>")`, no per-plugin entry needed.
 
 This scaffold ships one: [`lib/`](lib/), your project's shared library. Add more as your suites grow

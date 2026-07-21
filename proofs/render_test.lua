@@ -9,17 +9,11 @@
 local ARCHETYPE = prova.root -- this repo *is* the archetype under test
 local PROVA = os.getenv("PROVA_BIN") or "prova"
 
--- One render, shared by every check below. Author answers satisfy the `author` catalog library;
--- `defaults = true` takes the gitignore library's defaults so the render is fully headless.
+-- One render, shared by every check below. The archetype is promptless — a headless render with no
+-- answers is the whole interface, and this proof holds it to that.
 local rendered = prova.fixture("rendered", Scope.File, function(ctx)
 	return archetect.render({
 		source = ARCHETYPE,
-		answers = {
-			project_name = "acme",
-			author_name = "Ada Lovelace",
-			author_email = "ada@example.com",
-		},
-		defaults = true,
 		destination = ctx:tempdir(),
 	})
 end)
@@ -31,7 +25,7 @@ archetect.verify(rendered, {
 		".prova/prova.toml",
 		".prova/config.lua",
 		".prova/plugins/lib/init.lua",
-		".prova/plugins/lib/prova-plugin.toml",
+		".prova/plugins/lib/prova.toml",
 		"proofs/example_test.lua",
 		".gitignore",
 	},

@@ -8,8 +8,3 @@ requires:
 templating:
   trim_blocks: true
   lstrip_blocks: true
-
-catalog:
-  gitignore:
-    source: "https://github.com/archetect-common/gitignore-library.git#v1"
-    library: true

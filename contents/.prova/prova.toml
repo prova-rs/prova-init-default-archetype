@@ -1,0 +1,9 @@
+# Prova test suite — proof-driven development. Run `prova` from the project root.
+#
+# This manifest lives in the `.prova/` nook, so prova's own files tuck away while your proofs stay
+# visible at the project root (the nook's parent — discovery walks up to it). Every path below
+# resolves against that root.
+[run]
+proofs      = ["proofs"]           # directory-name patterns; your proof suites live in the open
+config      = ".prova/config.lua"  # the runtime companion — where capabilities are registered
+plugin_root = ".prova/plugins"     # this project's own plugins; `require("<dir>")` reaches each one
