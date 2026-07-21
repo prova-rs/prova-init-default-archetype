@@ -5,6 +5,8 @@ Shared code for your proof suites: helpers, fixtures, and topologies that more t
 
 - `init.lua` — the module. `lib.greeting(name)` is a starter helper; `lib.counter` is a starter
   shared fixture (`t:use(lib.counter)`). Replace them with your own.
-- `prova-plugin.toml` — the plugin manifest; declare private dependencies under `[plugins]`.
+- `prova.toml` — the plugin's `[plugin]` section (name, and private `[plugins]` deps). It's the same
+  manifest a project uses: a plugin is a test suite, so `lib/` can grow its own `proofs/` and a
+  `[run]` block to prove itself.
 
 A multi-file library can `require("lib.<sub>")` its own siblings placed next to `init.lua`.

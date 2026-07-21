@@ -1,0 +1,9 @@
+# Prova test suite — proof-driven development. Run `prova` from the project root.
+#
+# This is a hidden, flat manifest at the project ROOT, so `.luarc.json` and your proofs stay visible
+# while prova's own files tuck into `.prova/`. Every path below resolves against the manifest's
+# directory (here, the root).
+[run]
+paths       = ["proofs"]           # your proof suites live at the project root, in the open
+config      = ".prova/config.lua"  # the runtime companion — where capabilities are registered
+plugin_root = ".prova/plugins"     # this project's own plugins; `require("<dir>")` reaches each one
